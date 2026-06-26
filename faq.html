@@ -41,6 +41,27 @@
                 <input type="text" id="faqSearch" class="form-control" placeholder="Search track sizing, shipping, returns...">
             </div>
         </div>
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <button class="btn btn-sm btn-dark filter-faq-btn" data-target="all">All</button>
+            <button class="btn btn-sm btn-outline-dark filter-faq-btn" data-target="gear">Gear</button>
+            <button class="btn btn-sm btn-outline-dark filter-faq-btn" data-target="shipping">Shipping</button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="accordion shadow-sm" id="trackFaq">
+                   <div class="accordion-item faq-item" data-category="gear">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                👟 How do I choose sizing for carbon-plate sprint spikes?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#trackFaq">
+                            <div class="accordion-body text-muted">Our track spikes run true to competitive racing layouts. If you prefer extra clearance for your toe box over long-distance sessions, order a half-size up.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
     <footer class="bg-light text-center py-4 border-top mt-5">
