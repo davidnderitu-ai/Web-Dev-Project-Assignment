@@ -53,3 +53,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+    const galleryBtns = document.querySelectorAll('.gallery-filter-btn');
+    const lookbookCards = document.querySelectorAll('.lookbook-card');
+
+    if (galleryBtns.length > 0 && lookbookCards.length > 0) {
+        galleryBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const currentFilter = button.getAttribute('data-filter');
+
+                galleryBtns.forEach(btn => {
+                    btn.classList.remove('btn-dark', 'active');
+                    btn.classList.add('btn-outline-dark');
+                });
+                button.classList.add('btn-dark', 'active');
+                button.classList.remove('btn-outline-dark');
+
+                lookbookCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (currentFilter === 'all' || cardCategory === currentFilter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
